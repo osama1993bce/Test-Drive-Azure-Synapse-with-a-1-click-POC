@@ -6,7 +6,14 @@
 				"name": "IngestTripDataIntoADLS",
 				"description": "Copies the trip data csv file from the git repo and loads it into the ADLS.",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Wait1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.00:10:00",
 					"retry": 3,
@@ -74,7 +81,14 @@
 				"name": "IngestTripFaresDataIntoADLS",
 				"description": "Copies the trip fare data csv file from the git repo and loads it into the ADLS.",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Wait1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.00:10:00",
 					"retry": 3,
@@ -273,6 +287,15 @@
 						}
 					},
 					"firstRowOnly": false
+				}
+			},
+			{
+				"name": "Wait1",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 1
 				}
 			}
 		],
