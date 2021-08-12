@@ -1,0 +1,10 @@
+{
+	"name": "synapse-ws-sql--emulv3sm5t35aiqypocws1",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/80ebef40-3f7f-4972-b829-72efcd567faf/resourceGroups/test-naveed/providers/Microsoft.Synapse/workspaces/emulv3sm5t35aiqypocws1",
+		"groupId": "sql",
+		"fqdns": [
+			"emulv3sm5t35aiqypocws1.38ac5bcd-b8cc-405e-968c-1734538df984.sql.azuresynapse.net"
+		]
+	}
+}
